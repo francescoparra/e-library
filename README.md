@@ -2,7 +2,7 @@
 
 Quest'applicazione ci permetterà di accedere ad un applicazione web dove potremo ricercare dei libri e vederne le informazioni principali.
 
-#Realizzazione
+# Realizzazione
 
 1. Directories
   -  Components: all'interno di essa troviamo i vari componenti che userò nelle pagine dell'applicazione.
