@@ -2,10 +2,27 @@
 
 Quest'applicazione ci permetterà di accedere ad un applicazione web dove potremo ricercare dei libri e vederne le informazioni principali.
 
-#Realizzazione
+# Realizzazione
 
-1. React
-  - 
+1. Directories
+  -  Components: all'interno di essa troviamo i vari componenti che userò nelle pagine dell'applicazione.
+  -  Images: all'interno di essa troviamo le varie immagini utilizzate all'interno dell'applicazione.
+  -  Pages: all'interno di essa troviamo le pagine che andranno a comporre la mia applicazione.
+  -  Style: all'interno di essa troviamo i fogli di stili che applicherò alle pagine e ai componenti.
+2. React
+  -  Possiamo notare che nell'app ho utilizzato React Router, React Hooks e axios.
+  -  Le chiamate API vengono eseguite per i libri cercati dentro la home e verranno renderizzati poi nella BookCard tramite il passaggio di valori tra componenti, e per il signolo libro verà fatta una chiamata apposita tramite l'id, che ci fornirà le informazioni riguardanti lo specifico libro.
+  -  Notiamo che ho apportato alcune personalizzazzioni, come ad esempio le virgole tra i vari autori e poi alcune piccole interazioni per dare una migliore UX tramite i componenti Advice e Loading.
+3. SCSS
+  - Applico gli stili ai componenti e alle pagine rendendole responsive.
+ 
+# Conclusione
+
+L'applicazione lavora in tutte le sue funzioni sia su desktop che nella sua versione mobile.  
+
+Deploy eseguito su netlify: https://e-library-project.netlify.app/
+
+## Test the APP here: https://e-library-project.netlify.app/
 
 ## Built with
 To develop the app I used:
