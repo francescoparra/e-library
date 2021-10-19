@@ -1,0 +1,59 @@
+@import '../base/variables';
+
+.search{
+    padding: 1rem 0rem;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/src/images/library.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.search-form {
+    background: $offWhite;
+    text-transform: capitalize;
+    border-radius: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid $green;
+    border-radius: 6px;
+    .search-input {
+        font-size: 1.1rem;
+        height: 35px;
+        padding: 7px;
+        letter-spacing: 1px;
+        border: none;
+    } 
+    .search-btn{
+        color: $mainBlack;
+        font-size: 15px;
+        padding: 0px 10px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        outline: none;
+    }
+}
+.line{
+    width: 5rem;
+    height: 5px;
+    background: $green;
+    margin: 1rem auto;
+}
+
+@media screen and (min-width: 768px) {
+    .search{
+        height: 250px;
+    }
+    .search-input{
+        width: 300px;
+    }
+    .line{
+        width: 10rem;
+    }
+}
+

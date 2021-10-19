@@ -1,0 +1,68 @@
+@import '../base/variables';
+
+.singleBook-section{
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .singleBook-container{
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        .singleBook-info{
+            padding-left: 100px;
+            width: 50%;
+            p{
+                letter-spacing: 0.5px;
+            }
+        }
+        .singleBook-info *{
+            padding: 5px 0px;
+        }
+        .singleBook-img{
+            margin-left: 30px;
+            display: flex;
+            align-items: center;
+            width: 18%;
+            img{
+                border: 2px solid $green;
+                border-radius: 10px;
+                width: 100%;
+            }
+        }
+        .home-btn{
+            padding:0.7em 1.4em;
+            margin-top: 10px;
+            border-radius:0.15em;
+            color:$mainWhite;
+            background-color:$green;
+            text-align:center;
+            cursor: pointer;
+        }
+    }
+}
+@media screen and (max-width: 768px){
+    .singleBook-section{
+        .singleBook-container{
+            flex-direction: column;
+            margin-bottom: 30px;
+    
+            .singleBook-info{
+                padding-top: 10px;
+                padding-left: 0px;
+                width: 75%;
+                h2{
+                    text-align: center;
+                }
+            }
+            .singleBook-img{
+                margin-left: 0px;
+                width: 50%;
+            }
+        }
+    }
+}
+

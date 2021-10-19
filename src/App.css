@@ -1,38 +1,376 @@
-.App {
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.75rem 2rem;
+  background: #f7f7f7;
+  z-index: 1;
+  border-bottom: 2px solid #166613;
+}
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-header .logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.nav-header .logo h1 {
+  padding-left: 10px;
+  color: #222;
+}
+
+.nav-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.nav-icon {
+  font-size: 1.5rem;
+  color: #222;
+}
+
+.nav-links {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s linear;
+  list-style-type: none;
+}
+.nav-links a {
+  display: block;
+  text-decoration: none;
+  padding: 1rem 0;
+  color: #222;
+  transition: all 0.3s linear;
   text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.nav-links a:hover {
+  color: #166613;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.show-nav {
+  height: 100px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media screen and (min-width: 768px) {
+  .nav-btn {
+    display: none;
+  }
+
+  .nav-center {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav-links {
+    height: auto;
+    display: flex;
+    align-items: center;
+  }
+  .nav-links a {
+    padding: 0.5rem 0;
+    margin: 0 1rem;
   }
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  padding-top: 80px;
+  color: #222;
+  background: #fff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.search {
+  padding: 1rem 0rem;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/src/images/library.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.search-form {
+  background: #f7f7f7;
+  text-transform: capitalize;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #166613;
+  border-radius: 6px;
+}
+.search-form .search-input {
+  font-size: 1.1rem;
+  height: 35px;
+  padding: 7px;
+  letter-spacing: 1px;
+  border: none;
+}
+.search-form .search-btn {
+  color: #222;
+  font-size: 15px;
+  padding: 0px 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.line {
+  width: 5rem;
+  height: 5px;
+  background: #166613;
+  margin: 1rem auto;
+}
+
+@media screen and (min-width: 768px) {
+  .search {
+    height: 250px;
+  }
+
+  .search-input {
+    width: 300px;
+  }
+
+  .line {
+    width: 10rem;
+  }
+}
+.loading, .advice {
+  text-transform: capitalize;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.advice {
+  margin: 0px 5px;
+}
+
+.list-title {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.book-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0px;
+}
+.book-section .book-container {
+  background-color: #ececec;
+  border: 1px solid #166613;
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 10px 15px 10px 15px;
+  width: 70%;
+  flex-direction: column;
+  text-align: center;
+  display: flex;
+}
+.book-section .book-container .book-image {
+  padding: 1em 1em 1em 1em;
+}
+
+.link-btn {
+  background-color: #fff;
+  border: 1px solid black;
+  border-radius: 7px;
+  color: #222;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.link-btn:active {
+  background-color: #fff;
+  border-color: black;
+  transform: scale(0.96);
+}
+
+@media screen and (min-width: 768px) {
+  .book-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .book-section .book-container {
+    width: 20%;
+  }
+}
+.error-section {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.error-section .error-banner {
+  background: #fff;
+  color: #222;
+  padding: 2rem 1rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+.error-section .error-banner h1 {
+  font-size: 2.5rem;
+}
+.error-section .error-banner div {
+  width: 10rem;
+  height: 5px;
+  background: #166613;
+  margin: 1.7rem auto;
+}
+.error-section .error-banner p {
+  font-size: 1.2rem;
+}
+.error-section .error-banner .error-btn {
+  overflow: hidden;
+  transition: all 0.3s linear;
+  list-style-type: none;
+  display: block;
+  text-decoration: none;
+  padding: 1rem 0;
+  color: #222;
+  transition: all 0.3s linear;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.error-section .error-banner .error-btn:hover {
+  color: #166613;
+}
+
+.about-section {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+}
+.about-section .about {
+  display: flex;
+  justify-content: center;
+}
+.about-section .about .about-info {
+  width: 25%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.about-section .about .about-info h1 {
+  padding-bottom: 10px;
+  text-align: left;
+}
+.about-section .about .about-info div {
+  width: 5rem;
+  height: 5px;
+  background: #166613;
+}
+.about-section .about .about-info p {
+  padding-top: 20px;
+  letter-spacing: 1px;
+}
+.about-section .about .about-image {
+  margin-left: 10rem;
+  width: 33%;
+  height: 500px;
+  background-image: url("/src/images/about-library.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+@media screen and (max-width: 768px) {
+  .about-section {
+    margin: 28px 0px;
+  }
+
+  .about-image {
+    display: none;
+  }
+}
+.singleBook-section {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.singleBook-section .singleBook-container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.singleBook-section .singleBook-container .singleBook-info {
+  padding-left: 100px;
+  width: 50%;
+}
+.singleBook-section .singleBook-container .singleBook-info p {
+  letter-spacing: 0.5px;
+}
+.singleBook-section .singleBook-container .singleBook-info * {
+  padding: 5px 0px;
+}
+.singleBook-section .singleBook-container .singleBook-img {
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+  width: 18%;
+}
+.singleBook-section .singleBook-container .singleBook-img img {
+  border: 2px solid #166613;
+  border-radius: 10px;
+  width: 100%;
+}
+.singleBook-section .singleBook-container .home-btn {
+  padding: 0.7em 1.4em;
+  margin-top: 10px;
+  border-radius: 0.15em;
+  color: #fff;
+  background-color: #166613;
+  text-align: center;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 768px) {
+  .singleBook-section .singleBook-container {
+    flex-direction: column;
+    margin-bottom: 30px;
   }
-  to {
-    transform: rotate(360deg);
+  .singleBook-section .singleBook-container .singleBook-info {
+    padding-top: 10px;
+    padding-left: 0px;
+    width: 75%;
+  }
+  .singleBook-section .singleBook-container .singleBook-info h2 {
+    text-align: center;
+  }
+  .singleBook-section .singleBook-container .singleBook-img {
+    margin-left: 0px;
+    width: 50%;
   }
 }
+
+/*# sourceMappingURL=App.css.map */
