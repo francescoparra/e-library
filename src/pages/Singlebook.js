@@ -37,14 +37,30 @@ export default function Singlebook() {
             <section className='singleBook-section'>
                 <div className='singleBook-container'>
                     <div className='singleBook-img'>
-                        <img src={singleBook?.volumeInfo?.imageLinks?.thumbnail } alt={singleBook?.volumeInfo?.title} />
+                        <img src={singleBook?.volumeInfo?.imageLinks?.thumbnail === undefined 
+                        ? 'No image' 
+                        : singleBook?.volumeInfo?.imageLinks?.thumbnail } 
+                        alt={singleBook?.volumeInfo?.title} 
+                        />
                     </div>
                     <div className='singleBook-info'>
-                        <h2>{singleBook?.volumeInfo?.title}</h2>
+                        <h2>{singleBook?.volumeInfo?.title === undefined 
+                        ? 'No title found' 
+                        : singleBook?.volumeInfo?.title}
+                        </h2>
                         <h3>By: {authors(singleBook?.volumeInfo?.authors)}</h3>
-                        <h4>Category: {singleBook?.volumeInfo?.categories[0]}</h4>
-                        <p>Description: <br/>{singleBook?.volumeInfo?.description}</p>
-                        <p>No. of pages: {singleBook?.volumeInfo?.pageCount}</p>
+                        <h4>Category: {singleBook?.volumeInfo?.categories === undefined ?
+                        'No categories found'
+                        : singleBook?.volumeInfo?.categories[0]}</h4>
+                        <p>Description: <br/>
+                        {singleBook?.volumeInfo?.description === undefined
+                        ? 'No description found' 
+                        : singleBook?.volumeInfo?.description}
+                        </p>
+                        <p>No. of pages: {singleBook?.volumeInfo?.pageCount === undefined
+                        ? 'Number of pages not found' 
+                        : singleBook?.volumeInfo?.pageCount}
+                        </p>
                     <Link to='/'>
                         <button className='home-btn'>Back Home</button>
                     </Link>
