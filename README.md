@@ -20,6 +20,10 @@ Quest'applicazione ci permetterà di accedere ad un applicazione web dove potrem
 
 L'applicazione lavora in tutte le sue funzioni sia su desktop che nella sua versione mobile.  
 
+Deploy eseguito su netlify: https://e-library-project.netlify.app/
+
+##Test the APP here: https://e-library-project.netlify.app/
+
 ## Built with
 To develop the app I used:
 - React.js
