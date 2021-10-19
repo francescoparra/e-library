@@ -28,7 +28,6 @@ export default function Home() {
                 setLoading(false)
             })
     }
-    console.log(result);
 
     return (
         <div>

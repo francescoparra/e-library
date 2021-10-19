@@ -9,7 +9,6 @@ export default function Singlebook() {
     const { key } = useParams()
     const [singleBook, setSingleBook] = useState([])
 
-
     useEffect(() => {
         const fetchBook = async () => {
             try {
@@ -22,8 +21,6 @@ export default function Singlebook() {
         };
         fetchBook();
     }, [key]);
-
-    console.log(singleBook);
 
     const authors = (authors) => {
         if (!authors) return " Author not available ";
