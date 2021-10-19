@@ -1,3 +1,24 @@
+# E-Library
+
+Quest'applicazione ci permetterà di accedere ad un applicazione web dove potremo ricercare dei libri e vederne le informazioni principali.
+
+
+
+## Built with
+To develop the app I used:
+- React.js
+- React Router
+- React Hooks
+- Axios
+
+## API
+The API used is the Google Books API.
+
+API: https://developers.google.com/books/docs/overview
+
+
+
+# Installation
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
