@@ -2,7 +2,10 @@
 
 Quest'applicazione ci permetterà di accedere ad un applicazione web dove potremo ricercare dei libri e vederne le informazioni principali.
 
+#Realizzazione
 
+1. React
+  - 
 
 ## Built with
 To develop the app I used:
