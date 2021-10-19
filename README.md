@@ -22,7 +22,7 @@ L'applicazione lavora in tutte le sue funzioni sia su desktop che nella sua vers
 
 Deploy eseguito su netlify: https://e-library-project.netlify.app/
 
-##Test the APP here: https://e-library-project.netlify.app/
+## Test the APP here: https://e-library-project.netlify.app/
 
 ## Built with
 To develop the app I used:
