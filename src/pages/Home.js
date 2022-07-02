@@ -1,51 +1,56 @@
-import React, { useState } from 'react'
-import Searchbar from '../components/Searchbar'
-import axios from 'axios'
-import Advice from '../components/Advice'
-import Loading from '../components/Loading'
-import Booklist from '../components/Booklist'
+import React, { useState } from "react";
+import Searchbar from "../components/Searchbar";
+import axios from "axios";
+import Advice from "../components/Advice";
+import Loading from "../components/Loading";
+import Booklist from "../components/Booklist";
+import '../style/components/books.scss'
 
 export default function Home() {
+  let [book, setBook] = useState("");
+  let [result, setResult] = useState([]);
+  const [advice, setAdvice] = useState(true);
+  const [loading, setLoading] = useState(false);
 
-    const [book, setBook] = useState('')
-    const [result, setResult] = useState([])
-    const [advice, setAdvice] = useState(true)
-    const [loading, setLoading] = useState(false)
-
-    function handleChange(event) {
-        const book = event.target.value;
-        setBook(book)
-        setAdvice(true)
+  function handleChange(event) {
+    book = event.target.value;
+    setBook(book);
+    if (book !== "") {
+      setAdvice(false);
+      searchAxios();
+    } else {
+      setAdvice(true);
     }
+  }
 
-    function handleSubmit(event) {
-        setAdvice(false)
-        setLoading(true)
-        event.preventDefault();
-        axios.get(`https://www.googleapis.com/books/v1/volumes?q=${book}`)
-            .then(data => {
-                setResult(data.data.items);
-                setLoading(false)
-            })
+  function searchAxios() {
+    setAdvice(false);
+    setLoading(true);
+    axios
+      .get(`https://www.googleapis.com/books/v1/volumes?q=${book}`)
+      .then((data) => {
+        setResult(data.data.items);
+        setLoading(false);
+      });
+  }
+
+  function renderPage() {
+    if (advice) {
+      return <Advice />;
+    } else if (loading) {
+      return <Loading />;
+    } else if (result === undefined) {
+      return <h1>Book not found</h1>;
+    } else {
+      return <Booklist result={result} />;
     }
+  }
 
-    return (
-        <div>
-            <Searchbar
-                handleChange={handleChange}
-                handleSubmit={handleSubmit}
-            />
-            {advice ? <Advice /> :
-                loading ? <Loading /> :
-                    result === undefined ?
-                        <h1>Book not found</h1>
-                        : <Booklist result={result} />
-            }
-        </div>
-    )
+  return (
+    <section>
+      <Searchbar handleChange={handleChange} />
+        {renderPage()}
+    </section>
+  );
+  
 }
-
-
-
-
-

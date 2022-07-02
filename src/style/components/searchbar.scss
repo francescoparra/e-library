@@ -1,12 +1,13 @@
 @import '../base/variables';
 
 .search{
+    margin-top: 80px;
     padding: 1rem 0rem;
     height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url("/src/images/library.png");
+    background-image: url("../../images/library.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

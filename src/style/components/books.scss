@@ -5,57 +5,21 @@
   margin-top: 20px;
 }
 
-.book-section{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 20px 0px;
-    
-    .book-container {
-      background-color: $mainGrey;
-      border: 1px solid $green;
-      border-radius: 10px;
-      margin-top: 20px;
-      padding: 10px 15px 10px 15px;
-      width: 70%;
-      flex-direction: column;
-      text-align: center;
-      display: flex;
-      
-      .book-image {
-        padding: 1em 1em 1em 1em;
-      }
-    }
-  }
-    
-.link-btn {
-  background-color: $mainWhite;
-  border: 1px solid black;
-  border-radius: 7px;
-  color: $mainBlack;
-  cursor: pointer;
-  font-size: 16px;
-  margin: 10px;
-  padding: 5px 10px;
-  text-align: center;
-  text-decoration: none;
+.card-text-div{
+  background-color: $mainGrey;
+  max-height: 200px;
 }
-  
-.link-btn:active {
-  background-color: $mainWhite;
-  border-color: black;
-  transform: scale(.96);
-}
- 
 
-@media screen and (min-width: 768px){
-  .book-section{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    .book-container {
-      width: 20%;
-    }
-  }
+.book-image{
+  max-height: 400px;
+}
+
+.seeMoreBtn{
+  padding:0.7em 1.4em;
+  margin-top: 10px;
+  border-radius:0.15em;
+  color:$mainWhite;
+  background-color:$green;
+  text-align:center;
+  cursor: pointer;
 }

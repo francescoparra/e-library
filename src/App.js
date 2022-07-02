@@ -1,11 +1,12 @@
 import React from 'react';
-import './App.css';
 import Home from './pages/Home'
 import Error from './pages/Error'
 import About from './pages/About'
 import Navbar from './components/Navbar'
 import { Route, Switch } from 'react-router-dom'
 import Singlebook from './pages/Singlebook';
+import './style/base/base.scss'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 

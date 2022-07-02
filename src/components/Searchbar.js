@@ -1,27 +1,22 @@
-import React from 'react'
-import { FaSearch } from 'react-icons/fa'
+import React from "react";
+import '../style/components/searchbar.scss'
 
-
-export default function Searchbar({handleChange, handleSubmit}) {
-
-    return (
-        <>
-            <section className='search'>
-                <form className='search-form' onSubmit={handleSubmit}>
-                    <div className='form-container'>
-                        <input className='search-input' type='text'
-                            placeholder='Search a book'
-                            onChange={handleChange}
-                        />
-                        <button type='button' className='search-btn' onClick={handleSubmit}>
-                            <FaSearch />
-                        </button>
-                    </div>
-                </form>
-            </section>
-            <div className='line' />       
-        </>
-    )
+export default function Searchbar({ handleChange }) {
+  return (
+    <>
+      <section className="search">
+        <div className="search-form">
+          <div className="form-container">
+            <input
+              className="search-input"
+              type="text"
+              placeholder="Search a book"
+              onChange={handleChange}
+            />
+          </div>
+        </div>
+      </section>
+      <div className="line" />
+    </>
+  );
 }
-
-

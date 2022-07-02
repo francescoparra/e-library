@@ -2,19 +2,11 @@
 
 .singleBook-section{
     min-height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     .singleBook-container{
-        margin-top: 30px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
 
         .singleBook-info{
-            padding-left: 100px;
-            width: 50%;
+            margin-top: 100px;
+            margin-bottom: 50px;
             p{
                 letter-spacing: 0.5px;
             }
@@ -23,14 +15,11 @@
             padding: 5px 0px;
         }
         .singleBook-img{
-            margin-left: 30px;
-            display: flex;
-            align-items: center;
-            width: 18%;
+            margin-top: 120px;
             img{
-                border: 2px solid $green;
-                border-radius: 10px;
-                width: 100%;
+                border: 1px solid $green;
+                border-radius: 40%;
+                width: 70%;
             }
         }
         .home-btn{
